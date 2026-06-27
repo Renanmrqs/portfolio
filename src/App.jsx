@@ -1,14 +1,21 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Footer from './pages/Footer'
-import Header from './pages/Header'
-
+import Footer from './Footer'
+import Header from './Header'
+import Stack from './Stack'
+import Projects from './Projects'
+import About from './About'
+import Contact from './Contact'
+import Hero from './Hero'
 
 function App() {
   return (
     <div>
-      <Header/>
-      <Footer color="blue"/>
-      <Footer color="purple"/>
+    <Header />
+    <Hero />
+    <About />
+    <Stack />
+    <Projects />
+    <Contact />
+    <Footer />
     </div>
   )
 }

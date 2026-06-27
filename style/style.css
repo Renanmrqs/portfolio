@@ -1,0 +1,66 @@
+/* nav bar */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.nav-tittle {
+    border: 1px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* hero */
+
+.hero {
+    display: grid;
+}
+
+.btn-projects {
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.btn-cv {
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* footer  */
+
+.footer {
+    border-top: 1px solid #38bdf820;
+    color: #94a3b8;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    margin-top: auto;
+}
+
+.footer a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
