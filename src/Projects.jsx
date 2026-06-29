@@ -1,5 +1,5 @@
 function Projects({project_name, project_description, git_link, project_link, stack}) {
-    const listStack = stack.map(stack => <li>{stack}</li>) 
+    const listStack = stack.map(stack => <i className={stack}></i>) 
     return (
         <div className="project-card">
             <h1 className="project-tittle">{project_name}</h1>
