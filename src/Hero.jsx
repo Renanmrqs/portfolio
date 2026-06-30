@@ -5,7 +5,7 @@ function Hero() {
         <div className="hero">
             
             <div className='text-hero'>
-                <h2>Renan - Desenvolvedor Backend Python (hero)</h2>
+                <h2>Renan - Desenvolvedor Backend Python</h2>
                 <p>Ola, sou o Renan, Desenvolvedor com foco em backend com python, mas tenho um interesse por todas as areas de desenvolvimento, Frontend com react,
                     banco de dados com PostgreSQL, alem do backend. Busco uma oportunidade estagio para 
                     aplicar meus conhecimentos.
