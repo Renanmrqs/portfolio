@@ -15,14 +15,12 @@ function App() {
     <Stack />
     
     <Projects 
-    project_name="CineRagAnalytics" 
-    project_description="aplicativo de cinema de filmes" 
-    git_link="https://github.com/Renanmrqs/cinerag-frontend"
-    project_link="https://cinerag-analytics.vercel.app/home.html"  
+    repo='cinerag-frontend'
+    project_name="CineRag Analytics"  
     stack={["devicon-python-plain", "devicon-fastapi-plain"]}
     />
     
-    <Projects 
+    {/* <Projects 
     project_name="SentimentAI" 
     project_description="api de sentimento de filme" 
     git_link="link git" 
@@ -44,7 +42,7 @@ function App() {
     git_link="link git" 
     project_link="link deploy"  
     stack={["python", "scikitlearn"]}
-    />
+    /> */}
 
     <Contact />
     <Footer />
