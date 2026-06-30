@@ -8,13 +8,13 @@ function Projects({project_name, project_description, git_link, project_link, st
                 </p>
                 
                 <div className="project-stack">
-                    <ul>
+                    <ul className="list-stack">
                         {listStack}
                     </ul>
                 </div>
                     <div className="project-btn">
-                        <button className="project-link">{project_link}</button>
-                        <button className="project-git">{git_link}</button>
+                        <button className="project-link"> <a href={project_link} target="blank">Acesse o projeto</a></button>
+                        <button className="project-git"> <a href={git_link} target="blank">Acesse o repositorio</a></button>
                     </div>
         </div>
     )

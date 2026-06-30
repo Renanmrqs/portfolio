@@ -18,7 +18,7 @@ body {
     align-items: center;
     max-width: 1600px;
     margin: 0 auto;
-    border-bottom: 1px solid #38bdf820;
+    border-bottom: 1px solid #38bff888;
 }
 
 .nav-tittle {
@@ -36,15 +36,30 @@ body {
 .nav-list a {
     text-decoration: none;
     font-size: 14px;
+    color: white;
 }
 
 /* hero */
 
 .hero {
     display: flex;
-    flex-direction: column;
+    flex: 1;
+    flex-direction: row;
     padding: 8px;
     border-bottom: 1px solid #38bdf820;
+    
+}
+
+.text-hero {
+    text-align: left;
+}
+
+.img-hero {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .hero-btn{
@@ -54,6 +69,7 @@ body {
 
 .btn-projects a, .btn-cv a {
     text-decoration: none;
+    color: white;
 }
 
 .btn-projects {
@@ -112,5 +128,59 @@ body {
     background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(19, 34, 87, 1) 100%);
     border-radius: 10px;
     margin: 20px;
-    padding: 100px 120px;
+    padding: 50px 50px;
+    
+}
+
+.project-card:hover {
+    background-color: darkblue;
+}
+
+.project-stack {
+    display: flex;
+    margin: 5px;
+    
+}
+
+.list-stack {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.project-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-link a, .project-git a {
+    text-decoration: none;
+    font-style: oblique;
+    color: white;
+}
+
+.project-link {
+    background-color: #38bdf8;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 300px;
+    margin: auto;
+    width: 250px;
+}
+
+.project-git {
+    background-color: #38bdf8;
+    padding: 10px 25px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500px;
+    margin: auto;
+    width: 250px;
 }

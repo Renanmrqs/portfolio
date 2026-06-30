@@ -13,6 +13,7 @@
     "devicon": "^2.17.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-native": "^0.86.0",
     "react-router-dom": "^7.18.0"
   },
   "devDependencies": {
