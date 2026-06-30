@@ -21,7 +21,7 @@ function Projects({repo, project_link, project_name,stack}) {
                 console.log(error)
             }
         }
-    fetchData()}, [repo]
+    fetchData()}, []
 )
        
     
