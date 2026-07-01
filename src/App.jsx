@@ -6,6 +6,7 @@ import About from './About'
 import Contact from './Contact'
 import Hero from './Hero'
 import about_date from './data/jouney'
+import stack_date_back from './data/stack'
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
     about={about_date}
     />
     
-    <Stack />
+    <Stack 
+    front={["devicon-javascript-plain"]}
+    back={stack_date_back}
+    tec={["devicon-git-plain", "devicon-github-original"]}
+    />
     
     <Projects 
     repo='cinerag-frontend'

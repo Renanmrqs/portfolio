@@ -30,7 +30,9 @@ function Projects({repo, project_link, project_name, stack}) {
     return (
     
     <div className="project-card" id="projects">
-        <h1 className="project-tittle">{project_name}</h1>
+        <div className='project-card-left'>
+            
+            <h1 className="project-tittle">{project_name}</h1>
             <p className="project-description">
                 {project_description}
             </p>
@@ -40,12 +42,24 @@ function Projects({repo, project_link, project_name, stack}) {
                     {listStack}
                 </ul>
             </div>
-                <div className="project-btn">
-                    <button className="project-link"> <a href={project_link} target="blank">Acesse o projeto</a></button>
-                    <button className="project-git"> <a href={git_link} target="blank">Acesse o repositorio</a></button>
-                </div>
+
+            <div className="project-btn">
+                <button className="project-link"> <a href={project_link} target="blank">Acesse o projeto</a></button>
+                <button className="project-git"> <a href={git_link} target="blank">Acesse o repositorio</a></button>
+            </div>
+
+        </div>
+
+      
+            
+        <div className='project-img'>
+            <img src="https://opengraph.githubassets.com/1/Renanmrqs/cinerag-frontend" alt="" />
+        </div>
+
+
     </div>
     
+
     )
 }
 
