@@ -1,6 +1,12 @@
 function Stack( {front, back, tec} ) {
     const listFront = front.map(front => <i className={front} key={front}></i>) 
-    const listBack = back.map(back => <i className={back.icon} key={back.icon}></i>) 
+    
+    const listBack = back.map(back => 
+    <li key={back.icon}>
+         <i className={back.icon}></i>
+         <span className="name-icon">{back.name}</span>
+    </li>)
+
     const listTec = tec.map(tec => <i className={tec} key={tec}></i>) 
     
     
@@ -21,8 +27,7 @@ function Stack( {front, back, tec} ) {
                     backend
 
                     <ul className="list-backend">
-                        {listBack.icon}
-                        <span className="name-icon">{listBack.name}</span>
+                        {listBack}
                     </ul>
 
                 </div>
