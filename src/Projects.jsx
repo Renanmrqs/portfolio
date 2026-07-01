@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function Projects({repo, project_link, project_name,stack}) {
+function Projects({repo, project_link, project_name, stack}) {
     const listStack = stack.map(stack => <i className={stack} key={stack}></i>) 
     const [project_description, setProjectDescription] = useState(null);
     const [git_link, setGitLink] = useState(null);
@@ -14,7 +14,6 @@ function Projects({repo, project_link, project_name,stack}) {
                 const response = await fetch(`https://api.github.com/repos/Renanmrqs/${repo}`)
             
             const json = await response.json()
-            console.log(json)
             setProjectDescription(json.description)
             setGitLink(json.html_url)
             } catch (error) {

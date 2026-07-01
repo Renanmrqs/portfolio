@@ -193,6 +193,164 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 111, 1) 20%,
     width: 250px;
 }
 
+
+/* fazendo o about  */
+
+/* Container geral da timeline */
+.about {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Linha vertical no centro */
+.about::before {
+  content: '';
+  position: absolute;
+  left: 0%;
+  top: 100px; /* ajuste pra começar depois do título "Minha Jornada" */
+  bottom: 0;
+  width: 2px;
+  background: #2c3a5e;
+  transform: translateX(-50%);
+}
+
+/* Cada card */
+.card-about {
+  position: relative;
+  width: calc(50% - 50px); /* metade da tela, com espaço pra linha */
+  padding: 24px;
+  margin-bottom: 50px;
+  background: #101a30;
+  border-radius: 10px;
+  border: 1px solid #1e2a47;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* animacao passando o mouse */
+
+.card-about:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-color: #4a90e2;
+
+}
+
+/* ultimo card */
+
+.card-about:last-of-type {
+    background: #101a30;
+    border-radius: 10px;
+    border: 1px solid #1e3347;
+
+    .title-about {
+        color:#38bdf8
+    }
+
+    .subtitle-about {
+        color: #38bdf8;
+    }
+
+    .description-about {
+        text-shadow: 0 0 2px #38bdf8, 0 0 5px #38bdf8;
+    }
+
+    &:hover {
+        border-color: #38bdf8;
+    }
+}
+
+/* Bolinha pulsando só no último card */
+.card-about:last-of-type::after {
+  background: #38bdf8;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(56, 189, 248, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+  }
+}
+
+
+/* Cards ímpares (1º, 3º...) ficam na esquerda */
+.card-about:nth-of-type(odd) {
+  margin-right: auto;
+}
+
+/* Cards pares (2º, 4º...) ficam na direita */
+.card-about:nth-of-type(even) {
+  margin-left: auto;
+}
+
+/* Bolinha em cada card */
+.card-about::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4a91e2b2;
+  margin: center;
+}
+
+/* Bolinha do lado direito do card (que fica na esquerda da tela) */
+.card-about:nth-of-type(odd)::after {
+  right: -10px;
+}
+
+/* Bolinha do lado esquerdo do card (que fica na direita da tela) */
+.card-about:nth-of-type(even)::after {
+  left: -10px;
+}
+
+/* Estilo do texto dentro do card */
+.title-about {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.subtitle-about {
+  color: #4a90e2;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.description-about {
+  color: #b8c2d8;
+  line-height: 1.6;
+}
+
+/* Celular: tira a alternância, tudo em coluna única */
+@media (max-width: 768px) {
+  #about::before {
+    left: 20px;
+  }
+
+  .card-about {
+    width: calc(100% - 60px);
+    margin-left: 30px !important;
+    margin-right: 0 !important;
+  }
+
+  .card-about:nth-of-type(odd)::after,
+  .card-about:nth-of-type(even)::after {
+    left: -42px;
+    right: auto;
+  }
+}
+
 /* cellphone width */
 
 @media (max-width: 768px) {
