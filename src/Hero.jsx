@@ -12,8 +12,8 @@ function Hero() {
                 </p>
 
                 <div className="hero-btn">
-                <button className="btn-projects"> <a href="#projects">Veja meus projetos</a> </button>
-                <button className="btn-cv"> <a href="/public" download="curriculo_renan.pdf" >Baixe meu curriculo</a> </button>
+                <a className='btn-projects' href="#projects">Veja meus projetos</a> 
+                <a className='btn-cv' href="/public/curriculo_renan.pdf" download="Curriculo-Renan.pdf" >Baixe meu curriculo</a>
                 </div>
 
             </div>

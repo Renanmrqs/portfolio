@@ -26,8 +26,7 @@ function Stack( {front, back, tec, certificates} ) {
             <img src={harvard_logo} alt="logo harvard" />
             <span className="name-icon">{certificates.name}</span>
         </div>
-        
-        <button className="btn-stack"> <a href="/public" download={certificates.file}>Baixe o certificado</a> </button>
+        <a className="btn-stack"  href={`/public/${certificates.file}`} download={certificates.file}>Baixe o certificado</a> 
     </li>
 
     )

@@ -7,6 +7,8 @@ import Contact from './Contact'
 import Hero from './Hero'
 import about_date from './data/jouney'
 import {stack_date_back, tech_date, front_date, certificates} from './data/stack'
+import cinerag from './assets/cineragprint.png';
+
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
     project_name="CineRag Analytics"  
     project_link="https://cinerag-analytics.vercel.app/home.html"  
     stack={["devicon-javascript-plain", "devicon-css3-plain", "devicon-html5-plain", "devicon-fastapi-plain"]}
+    img={cinerag}
     />
     
     <Projects 
@@ -37,6 +40,7 @@ function App() {
     repo="SentimentAI"
     project_link="https://renanmrqs-sentimentai-app-j7ouwz.streamlit.app/"  
     stack={["devicon-python-plain", "devicon-streamlit-plain", "devicon-scikitlearn-plain", "devicon-pandas-plain", "devicon-fastapi-plain", ""]}
+    img={cinerag}
     />
 
     <Projects 
@@ -44,6 +48,7 @@ function App() {
     repo="ToxiBlock"
     project_link="https://chromewebstore.google.com/detail/toxiblock/gbdijbaipjncfbjecgpfbbadhnibchha?utm_source=item-share-cb"  
     stack={["devicon-javascript-plain", "devicon-fastapi-plain"]}
+    img={cinerag}
     />
 
     <Projects 
@@ -51,6 +56,7 @@ function App() {
     repo="Gym-Api"
     project_link="https://gym-api-08pc.onrender.com/docs#/"  
     stack={["devicon-python-plain", "devicon-postgresql-plain", "devicon-sqlalchemy-plain", "devicon-fastapi-plain"]}
+    img={cinerag}
     />
 
     <Contact />

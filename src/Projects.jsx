@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function Projects({repo, project_link, project_name, stack}) {
+function Projects({repo, project_link, project_name, stack, img}) {
     const listStack = stack.map(stack => <i className={stack} key={stack}></i>) 
     const [project_description, setProjectDescription] = useState(null);
     const [git_link, setGitLink] = useState(null);
@@ -45,8 +45,8 @@ function Projects({repo, project_link, project_name, stack}) {
             </div>
 
             <div className="project-btn">
-                <button className="project-link"> <a href={project_link} target="blank">Acesse o projeto</a></button>
-                <button className="project-git"> <a href={git_link} target="blank">Acesse o repositorio</a></button>
+                <button className="project-link"> <a href={project_link} target="_blank" rel='noopener, noreferrer'>Acesse o projeto</a></button>
+                <button className="project-git"> <a href={git_link} target="_blank" rel='noopener, noreferrer'>Acesse o repositorio</a></button>
             </div>
 
         </div>
@@ -54,7 +54,7 @@ function Projects({repo, project_link, project_name, stack}) {
       
             
         <div className='project-img'>
-            <img src="https://opengraph.githubassets.com/1/Renanmrqs/cinerag-frontend" alt="" />
+            <img src={img} alt="" />
         </div>
 
 
