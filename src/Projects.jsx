@@ -4,15 +4,19 @@ function Projects({repo, project_link, project_name, stack, img}) {
     const listStack = stack.map(stack => <i className={stack} key={stack}></i>) 
     const [project_description, setProjectDescription] = useState(null);
     const [git_link, setGitLink] = useState(null);
-
+    const gitHubKey = import.meta.env.VITE_GITHUB_KEY
     
             
 
         useEffect(() => {
             const fetchData = async () => {
             try {
-                const response = await fetch(`https://api.github.com/repos/Renanmrqs/${repo}`)
-            
+                const response = await fetch(`https://api.github.com/repos/Renanmrqs/${repo}`, {
+                    headers: {
+                        'Authorization': `bearer ${gitHubKey}`,
+                       'Accept': 'application/vnd.github+json'
+                    }
+                });
             const json = await response.json()
             setProjectDescription(json.description)
             setGitLink(json.html_url)
@@ -20,15 +24,11 @@ function Projects({repo, project_link, project_name, stack, img}) {
                 console.log(error)
             }
         }
-    fetchData()}, []
+    fetchData()}, [repo]
 )
        
     
-
-    
-    
     return (
-    
 
     <div className="project-card" id="projects">
         <div className='project-card-left'>
@@ -51,12 +51,9 @@ function Projects({repo, project_link, project_name, stack, img}) {
 
         </div>
 
-      
-            
         <div className='project-img'>
-            <img src={img} alt="" />
+            <img src={img} alt="img projects" />
         </div>
-
 
     </div>
     
