@@ -6,7 +6,7 @@ import About from './About'
 import Contact from './Contact'
 import Hero from './Hero'
 import about_date from './data/jouney'
-import stack_date_back from './data/stack'
+import {stack_date_back, tech_date, front_date, certificates} from './data/stack'
 
 function App() {
   return (
@@ -19,9 +19,10 @@ function App() {
     />
     
     <Stack 
-    front={["devicon-javascript-plain"]}
+    front={front_date}
     back={stack_date_back}
-    tec={["devicon-git-plain", "devicon-github-original"]}
+    tec={tech_date}
+    certificates={certificates}
     />
     
     <Projects 

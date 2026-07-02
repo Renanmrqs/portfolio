@@ -8,7 +8,7 @@ function About( {about} ) {
     const arrayMap = hidenAbout ? about : about.slice(0, 2);
     
     return (
-        <div className="about">
+        <div className="about" id="about">
         <h1>Minha Jornada</h1>
                  
             {arrayMap.map( (arrayMap) => (

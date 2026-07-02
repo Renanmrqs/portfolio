@@ -29,6 +29,7 @@ function Projects({repo, project_link, project_name, stack}) {
     
     return (
     
+
     <div className="project-card" id="projects">
         <div className='project-card-left'>
             

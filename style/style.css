@@ -133,11 +133,14 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 111, 1) 20%,
     gap: 55px;
     flex-direction: row;
     border-radius: 5px;
-    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(19, 34, 87, 1) 100%);
+    background: #101a30;
+    border: 1px solid #1e2a47;
     border-radius: 10px;
     margin: 20px;
     padding: 65px 45px;
     flex: 1;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+   
 }
 
 .project-card-left {
@@ -156,7 +159,8 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 111, 1) 20%,
 }
 
 .project-card:hover {
-    background-color: darkblue;
+  transform: translateX((-4px));
+  border-color: #4a90e2;
 }
 
 .project-stack {
@@ -215,7 +219,7 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 111, 1) 20%,
 /* Container geral da timeline */
 .about {
   position: relative;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 60px 20px;
 }
@@ -224,7 +228,7 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 111, 1) 20%,
 .about::before {
   content: '';
   position: absolute;
-  left: 0%;
+  left: 50%;
   top: 100px; /* ajuste pra começar depois do título "Minha Jornada" */
   bottom: 0;
   width: 2px;
@@ -366,32 +370,159 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 111, 1) 20%,
 /* css do stack */
 
 .stack {
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    border-bottom: 1px solid #38bdf820;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.stack-frontend {
-  flex: 1;
-  flex-direction: row;
+.stack h1 {
   text-align: left;
-  max-width: 400px;
+  margin-bottom: 30px;
 }
 
-.stack-backend {
-  flex: 1;
-    flex-direction: row;
-  text-align: center;
-  max-width: 400px;
+.stack h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  color: #99b2cf;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
-.stack-tecnologies {
-  flex: 1;
-    flex-direction: row;
-  text-align: right;
-  max-width: 400px;
+.stack-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
+
+.stack-frontend, .stack-backend, .stack-tecnologies {
+  display: inline-flex; 
+  flex-direction: column;
+  background: #101a30;
+  border: 1px solid #1e2a47;
+  border-radius: 10px;
+  padding: 24px;
+  min-width: 220px;
+  transition: border-color 0.3s ease;
+
+}
+
+.stack-frontend:hover, .stack-backend:hover, .stack-tecnologies:hover, .stack-certificates:hover {
+  border-color: #4a90e2;
+}
+
+.stack-frontend h3, .stack-backend h3, .stack-tecnologies h3, .stack-certificates h3 {
+  color: #4a90e2;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.list-frontend, .list-backend, .list-tec, .list-certificates {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+
+.list-frontend li, .list-backend li, .list-tec li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b8c2d8;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.list-frontend li:hover, .list-backend li:hover, .list-tec li:hover, .list-certificates li:hover {
+  font-size: 1.1rem;
+  color: #4a90e2;
+}
+
+
+.stack-certificates {
+  display: inline-flex; 
+  flex-direction: column;
+  background: #101a30;
+  border: 1px solid #1e2a47;
+  border-radius: 10px;
+  padding: 24px;
+  min-width: 220px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+ 
+  width: 100%;
+}
+
+.btn-stack {
+  color: #4a90e2;
+  background: transparent;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border: 1px solid #4a90e2;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-stack:hover {
+  background: #4a90e2;
+  color: #fff;
+}
+
+
+.list-certificates li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.list-certificates li .cert-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-certificates img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.list-certificates span {
+  flex: 1;
+  min-width: 200px;
+}
+
+.list-certificates a {
+  text-decoration: none;
+  color:#ffffff
+}
+
+.stack > div {
+  display: flex;
+  gap: 30px;
+}
+
+.stack-frontend,
+.stack-backend,
+.stack-tecnologies,
+.stack-certificates {
+  flex: 1; /* cada um ocupa uma fração igual do espaço disponível */
+}
+
 
 /* Celular: tira a alternância, tudo em coluna única */
 @media (max-width: 768px) {
@@ -453,7 +584,7 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 111, 1) 20%,
 
     .project-btn {
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 .project-card {
